@@ -1,0 +1,40 @@
+---
+title: Hi Hugo
+author: Simon Urbanek
+date: '2021-04-23'
+slug: hi-hugo
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-04-23T07:16:08-04:00'
+featured: no
+math: true
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+```{r}
+summary(Orange)
+```
+
+# Putting in some mathematics
+
+The Pythagorean Theorem says that if $a$ and $b$ are the lengths of the legs of a right triangle and if $c$ is the length of the hypotenuse then $a^2 + b^2 = c^2$. One can also consider other theorems. 
+
+```{r echo = FALSE}
+library(ggplot2)
+oplot <- ggplot(Orange, aes( x = age, 
+                             y = circumference, 
+                             colour = Tree)) + 
+    geom_point() + 
+    geom_line() + 
+    guides(colour = FALSE) + 
+    theme_bw()
+oplot
+```
